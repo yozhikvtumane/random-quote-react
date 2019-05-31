@@ -70,7 +70,7 @@ class QuoteBox extends React.Component {
 
     nextQuote() {
         let quoteNum = Math.floor(Math.random() * quotes.length);
-        let {quote,author} = quotes[quoteNum];
+        let {quote, author} = quotes[quoteNum];
 
         this.setState({
             quote: {
