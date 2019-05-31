@@ -11,10 +11,10 @@ body {
     background-color: rgb(119, 177, 169);
     color: rgb(119, 177, 169);
     overflow: hidden;
+
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 #quote-box {
@@ -50,7 +50,6 @@ body {
 
 #tweet-quote,
 #new-quote {
-
     padding: 0.9em;
     border-radius: 5px;
     background: rgb(119, 177, 169);
