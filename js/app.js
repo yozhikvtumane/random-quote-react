@@ -45,30 +45,20 @@ class QuoteBox extends React.Component {
         super(props);
         let quoteNum = Math.floor(Math.random() * quotes.length);
         this.nextQuote = this.nextQuote.bind(this);
-        let {
-            quote,
-            author
-        } = quotes[quoteNum];
-        console.log(quote);
+        let {quote, author} = quotes[quoteNum];
+
         this.state = {
             quote: {
                 text: quote,
                 author: author,
-                url: "https://twitter.com/intent/tweet?text=" +
-                    '"' +
-                    encodeURI(quote) +
-                    '" - ' +
-                    encodeURI(author)
+                url: "https://twitter.com/intent/tweet?text=" + '"' + encodeURI(quote) + '" - ' + encodeURI(author)
             }
         };
     }
 
     nextQuote() {
         let quoteNum = Math.floor(Math.random() * quotes.length);
-        let {
-            quote,
-            author
-        } = quotes[quoteNum];
+        let {quote,author} = quotes[quoteNum];
 
         this.setState({
             quote: {
@@ -85,7 +75,10 @@ class QuoteBox extends React.Component {
                 <p id="text">{this.state.quote.text}</p>
                 <p id="author">- {this.state.quote.author}</p>
                 <div className="buttons">
-                <a id="tweet-quote" target="_blank" href={this.state.quote.url}>Tweet</a>
+                <a id="tweet-quote"
+                   target="_blank"
+                   href={this.state.quote.url}>
+                Tweet</a>
                 <button id="new-quote" onClick={this.nextQuote}>New Quote</button>
                 </div>
 
