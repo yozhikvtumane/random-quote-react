@@ -40,6 +40,18 @@ const quotes = [{
     }
 ];
 
+const Buttons = (props) => {
+    return (
+        <div className="buttons">
+            <a id="tweet-quote"
+            target="_blank"
+            href={props.href}>
+            Tweet</a>
+            <button id="new-quote" onClick={props.onClick}>New Quote</button>
+        </div>
+    )
+}
+
 class QuoteBox extends React.Component {
     constructor(props) {
         super(props);
@@ -74,14 +86,7 @@ class QuoteBox extends React.Component {
             <React.Fragment>
                 <p id="text">{this.state.quote.text}</p>
                 <p id="author">- {this.state.quote.author}</p>
-                <div className="buttons">
-                <a id="tweet-quote"
-                   target="_blank"
-                   href={this.state.quote.url}>
-                Tweet</a>
-                <button id="new-quote" onClick={this.nextQuote}>New Quote</button>
-                </div>
-
+                <Buttons href={this.state.quote.url} onClick={this.nextQuote}/>
             </React.Fragment>
         );
     }
