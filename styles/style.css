@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    outline: none;
 }
 
 body {
@@ -16,34 +17,33 @@ body {
 
 }
 
-h1 {
-    color: red;
-}
-
 #quote-box {
     background-color: #fff;
     width: 30%;
     border-radius: 5px;
-    display: flex;
     padding: 3em;
-    flex-wrap: wrap;
     filter: drop-shadow(0px 0px 31px rgb(0, 0, 0, 0.2));
-
+    
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #text {
-    flex: 1 100%;
     text-align: center;
     font-size: 1.5rem;
+
+    flex: 1 100%;
 }
 
 #author {
-    flex: 1 100%;
     text-align: right;
+    
+    flex: 1 100%;
 }
 
 .buttons {
     flex: 1 100%;
+    
     display: flex;
     justify-content: space-between;
 }
