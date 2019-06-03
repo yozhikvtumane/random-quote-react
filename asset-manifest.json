@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/random-quote-react/static/css/main.19cb5e19.chunk.css",
+    "main.js": "/random-quote-react/static/js/main.71329f1c.chunk.js",
+    "main.js.map": "/random-quote-react/static/js/main.71329f1c.chunk.js.map",
+    "runtime~main.js": "/random-quote-react/static/js/runtime~main.fa05e5a7.js",
+    "runtime~main.js.map": "/random-quote-react/static/js/runtime~main.fa05e5a7.js.map",
+    "static/js/2.d3ba7428.chunk.js": "/random-quote-react/static/js/2.d3ba7428.chunk.js",
+    "static/js/2.d3ba7428.chunk.js.map": "/random-quote-react/static/js/2.d3ba7428.chunk.js.map",
+    "index.html": "/random-quote-react/index.html",
+    "precache-manifest.9dd84768330d43d09812d1c28383de05.js": "/random-quote-react/precache-manifest.9dd84768330d43d09812d1c28383de05.js",
+    "service-worker.js": "/random-quote-react/service-worker.js",
+    "static/css/main.19cb5e19.chunk.css.map": "/random-quote-react/static/css/main.19cb5e19.chunk.css.map"
+  }
+}
