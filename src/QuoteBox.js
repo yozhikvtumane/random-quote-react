@@ -38,11 +38,16 @@ class QuoteBox extends React.Component {
 
   componentDidMount() {
     fetch("https://raw.githubusercontent.com/yozhikvtumane/random-quote-react/master/js/quotes.json")
-      .then((res)=>res.json())
-      .then((data)=>{
+      .then((res) => res.json())
+      .then((data) => {
+
+        let stateData = data.map((e, i) => {
+          return {...e, id: i + 1, link: 'https://twitter.com/intent/tweet?text=' + "\"" + encodeURI(e.quote) + "\" - " + encodeURI(e.author)}
+        })
+
         this.setState({
           isLoaded: true,
-          quotes: data.map(e=>e)
+          quotes: stateData.map(e=>e)
         })
       }, (error)=>{
         this.setState({
@@ -77,12 +82,11 @@ class QuoteBox extends React.Component {
           )
       } else {
         let num = Math.floor(Math.random() * quotes.length)
-        let link = 'https://twitter.com/intent/tweet?text=' + "\"" + encodeURI(quotes[num].quote) + "\" - " + encodeURI(quotes[num].author)
         return (
           <React.Fragment>
               <p id="text">{quotes[num].quote}</p>
               <p id="author">{"- " + quotes[num].author}</p>
-              <Buttons href={link} onClick={this.nextQuote}/>
+              <Buttons href={quotes[num].link} onClick={this.nextQuote}/>
           </React.Fragment>
         )
       }
